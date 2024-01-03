@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="font-Outfit">
+    <div
+      class="h-screen w-[screen] flex flex-col justify-center items-center relative bg-cover"
+      style="
+        background-image: url('./coffee4.webp');
+        height: 100vh;
+        width: 100v;
+        background-repeat: no-repeat;
+      "
+    >
+      <div
+        class="gradient h-screen w-full opacity-90 z-0 absolute top-0 left-0"
+      />
+      <div
+        class="h-screen w-full flex flex-col justify-center items-center relative z-20"
+      >
+        <div class="text-center text-text tracking-widest">
+          <h1 class="text-6xl font-bold mb-4">TEMPO</h1>
+          <p class="text-lg mb-12">SPECIALITY COFFE</p>
+          <h2 class="text-white font-normal text-5xl">MENU</h2>
+        </div>
+        <div
+          class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-center tracking-widest"
+        >
+          <p class="text-sm">
+            where coffe and music are aligned with tempo <br />
+            where coffe and music are something
+          </p>
+        </div>
+      </div>
+      <div class="py-16 sm:px-6 px-2 aos">
+        <ul
+          id="categories_tabs"
+          class="flex flex-wrap justify-center w-full gap-3 font-medium my-6"
+        ></ul>
+        <h1 id="title" class="text-3xl pt-16 text-center"></h1>
+        <div
+          id="cards-container"
+          class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 py-24 gap-4 w-full"
+        ></div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

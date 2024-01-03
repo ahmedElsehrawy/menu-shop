@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient {
+  background: rgb(52, 44, 82);
+  background: radial-gradient(
+    circle,
+    rgba(52, 44, 82, 1) 0%,
+    rgba(230, 188, 162, 1) 0%,
+    rgb(165 125 73) 64%,
+    rgb(137 99 28) 163%,
+    rgb(255 255 255) 100%
+  );
+}
+
+.gradient2 {
+  background: rgb(52, 44, 82);
+  background: linear-gradient(
+    91deg,
+    rgba(52, 44, 82, 1) 0%,
+    rgba(230, 188, 162, 1) 0%,
+    rgba(185, 131, 60, 1) 7%,
+    rgba(152, 121, 63, 1) 103%,
+    rgba(65, 55, 55, 1) 108%
+  );
+}
+
+.custom-hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}

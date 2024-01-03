@@ -1,0 +1,9 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "main": "/src/index.html",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
