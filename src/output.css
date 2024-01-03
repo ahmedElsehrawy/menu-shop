@@ -810,7 +810,7 @@ video {
 
 .custom-hidden {
   opacity: 0;
-  filter: blur(5px);
+  filter: blur(1px);
   transform: translateX(-100%);
   transition: all 2s;
 }
