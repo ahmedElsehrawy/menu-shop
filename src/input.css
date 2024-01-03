@@ -26,6 +26,19 @@
   );
 }
 
+.gradient3 {
+  background: rgb(52, 44, 82);
+
+  background: radial-gradient(
+    circle,
+    rgba(52, 44, 82, 1) 0%,
+    rgba(230, 188, 162, 1) 0%,
+    rgb(133 105 69) 64%,
+    rgb(137 99 28) 163%,
+    rgb(255 255 255) 100%
+  );
+}
+
 .custom-hidden {
   opacity: 0;
   filter: blur(1px);
