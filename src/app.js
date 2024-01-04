@@ -136,6 +136,7 @@ const data = [
 ];
 
 let CategoriesTabs = document.getElementById("categories_tabs");
+let title = document.getElementById("title");
 
 console.log(CategoriesTabs);
 console.log(data);
@@ -161,6 +162,7 @@ data.forEach((element) => {
     newButtonElement.classList.add("text-white");
     newButtonElement.classList.add("hover:text-white");
     addAnimation();
+    title.scrollIntoView({ behavior: "smooth" });
   });
 
   newLiElement.appendChild(newButtonElement);
@@ -178,7 +180,6 @@ const createTheCards = (buttonId) => {
     currentCategory
   );
 
-  let title = document.getElementById("title");
   title.innerText = buttonId;
 
   currentCategory.drinks.forEach((drink, idx) => {
@@ -187,7 +188,7 @@ const createTheCards = (buttonId) => {
     newCardContainerElement.className = "flex justify-center";
     let newCardElement = document.createElement("div");
     newCardElement.className =
-      "flex flex-col justify-center items-center h-[460px] w-[80%] pt-4 rounded-[32px] text-center transition duration-500 custom-hidden text-white";
+      "flex flex-col justify-center items-center h-[390px] w-[80%] pt-4 rounded-[32px] text-center transition duration-500 custom-hidden text-white relative overflow-hidden";
 
     if (idx % 3 === 0) {
       newCardElement.classList.add("gradient4");
@@ -198,22 +199,30 @@ const createTheCards = (buttonId) => {
     }
 
     let title = document.createElement("h1");
-    title.className = "text-lg tracking-widest w-full ";
+    title.className = "text-lg tracking-widest w-full absolute top-12";
     title.innerText = drink.name;
     newCardElement.appendChild(title);
+
+    let pricesContainer = document.createElement("div");
+    pricesContainer.className =
+      "absolute bottom-0 right-0  text-black w-full h-2/5 rounded-tl-full flex justify-center items-center flex-col p-4";
 
     drink.sizes.forEach((size) => {
       let priceRow = document.createElement("div");
       priceRow.className = "flex gap-4";
       let sizeName = document.createElement("span");
+      sizeName.className = "text-white text-lg ";
       sizeName.innerText = size.size;
       let price = document.createElement("span");
+      price.className = "text-white text-lg";
+
       price.innerText = `${size.price} EGP`;
 
       priceRow.appendChild(sizeName);
       priceRow.appendChild(price);
-      newCardElement.appendChild(priceRow);
+      pricesContainer.appendChild(priceRow);
     });
+    newCardElement.appendChild(pricesContainer);
 
     newCardContainerElement.appendChild(newCardElement);
     cardsContainer.appendChild(newCardContainerElement);
@@ -239,3 +248,5 @@ const addAnimation = () => {
 };
 
 addAnimation();
+
+console.log(window.scrollY);
