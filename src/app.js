@@ -149,7 +149,7 @@ data.forEach((element) => {
   newButtonElement.id = element.categoryName;
 
   newButtonElement.className =
-    "inline-block p-3 shadow-md text-text transition duration-400 hover:text-primaryColor text-xs rounded-[24px]";
+    "inline-block p-3 shadow-md text-text transition duration-400 hover:text-primaryColor text-xs outline-none rounded-[24px]";
   newButtonElement.innerText = element.categoryName;
   newButtonElement.addEventListener("click", () => {
     createTheCards(element.categoryName);
