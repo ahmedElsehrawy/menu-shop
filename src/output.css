@@ -601,16 +601,16 @@ video {
   display: grid;
 }
 
-.h-64 {
-  height: 16rem;
+.h-\[460px\] {
+  height: 460px;
 }
 
 .h-screen {
   height: 100vh;
 }
 
-.w-64 {
-  width: 16rem;
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .w-\[screen\] {
@@ -652,6 +652,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded-\[24px\] {
@@ -818,6 +822,24 @@ video {
     rgb(137 99 28) 163%,
     rgb(255 255 255) 100%
   );
+}
+
+.gradient4 {
+  background-color: transparent;
+  background-image: linear-gradient(45deg, #211b1a 0%, #3f3735 100%);
+  box-shadow: 0 50px 50px -40px rgba(0, 0, 0, 0.5);
+}
+
+.gradient5 {
+  background-color: transparent;
+  background-image: linear-gradient(45deg, #4c8d81 0%, #c39868 100%);
+  box-shadow: 0 50px 50px -40px rgba(0, 0, 0, 0.5);
+}
+
+.gradient6 {
+  background-color: transparent;
+  background-image: linear-gradient(45deg, #a77443 0%, #c39868 100%);
+  box-shadow: 0 50px 50px -40px rgba(0, 0, 0, 0.5);
 }
 
 .custom-hidden {

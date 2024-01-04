@@ -181,22 +181,30 @@ const createTheCards = (buttonId) => {
   let title = document.getElementById("title");
   title.innerText = buttonId;
 
-  currentCategory.drinks.forEach((drink) => {
+  currentCategory.drinks.forEach((drink, idx) => {
     //create the card for each drink in the category
     let newCardContainerElement = document.createElement("div");
     newCardContainerElement.className = "flex justify-center";
     let newCardElement = document.createElement("div");
     newCardElement.className =
-      "flex flex-col justify-center items-center h-64 w-64 pt-4 shadow-md rounded-[32px] text-center transition duration-500 custom-hidden";
+      "flex flex-col justify-center items-center h-[460px] w-[80%] pt-4 rounded-[32px] text-center transition duration-500 custom-hidden text-white";
+
+    if (idx % 3 === 0) {
+      newCardElement.classList.add("gradient4");
+    } else if (idx % 2 === 0) {
+      newCardElement.classList.add("gradient5");
+    } else {
+      newCardElement.classList.add("gradient6");
+    }
 
     let title = document.createElement("h1");
-    title.className = "text-lg text-text tracking-widest w-full ";
+    title.className = "text-lg tracking-widest w-full ";
     title.innerText = drink.name;
     newCardElement.appendChild(title);
 
     drink.sizes.forEach((size) => {
       let priceRow = document.createElement("div");
-      priceRow.className = "text-text flex gap-4";
+      priceRow.className = "flex gap-4";
       let sizeName = document.createElement("span");
       sizeName.innerText = size.size;
       let price = document.createElement("span");
